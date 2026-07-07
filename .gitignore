@@ -1,2 +1,13 @@
-.env
+cc-data-migration/data/
+volunteer_exports/
+
+# Block all CSV and Excel files in the project
 *.csv
+*.xlsx
+
+# Block python cache files generated during the script execution
+__pycache__/
+*.pyc
+
+.env
+.env.local
