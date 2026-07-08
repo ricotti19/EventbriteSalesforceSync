@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 from dotenv import load_dotenv
-from simple_salesforce import Salesforce
+from simple_salesforce import Salesforce # installed in terminal
 
 load_dotenv()
 
