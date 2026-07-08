@@ -51,15 +51,15 @@ def run_campaign_cleanup():
         if campaign_year and campaign_year < current_year:
             # It's an old campaign
             if is_active:
-                logging.info(f"📁 Archiving old campaign: '{name}' ({campaign_year})")
+                logging.info(f"Archiving old campaign: '{name}' ({campaign_year})")
                 sf.Campaign.update(campaign_id, {'IsActive': False})
         else:
             # It's a recent/current campaign
             if not is_active:
-                logging.info(f"✨ Restoring/Keeping active: '{name}'")
+                logging.info(f"Restoring/Keeping active: '{name}'")
                 sf.Campaign.update(campaign_id, {'IsActive': True})
 
-    logging.info("🎉 Salesforce cleanup complete! Old data is archived and recent data is visible.")
+    logging.info("Salesforce cleanup complete! Old data is archived and recent data is visible.")
 
 if __name__ == "__main__":
     if not all([SF_USERNAME, SF_PASSWORD]):
