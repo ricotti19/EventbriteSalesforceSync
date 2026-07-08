@@ -24,5 +24,7 @@ This repository contains the backend automation pipeline and data migration fram
 * **CRM Platform:** Salesforce (Using REST API wrapper via `simple-salesforce`)
 * **Source Systems:** Eventbrite API, Constant Contact Data Export
 
-Note: CSVs hidden
 ---
+
+Note: CSVs hidden
+
