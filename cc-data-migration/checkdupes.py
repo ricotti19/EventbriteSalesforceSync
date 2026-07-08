@@ -1,3 +1,4 @@
+# testing
 import os
 from dotenv import load_dotenv
 from simple_salesforce import Salesforce
@@ -11,7 +12,7 @@ sf = Salesforce(
     domain=os.getenv("SF_DOMAIN", "login")
 )
 
-print("🔍 Querying Salesforce for duplicate email addresses...")
+print("Querying Salesforce for duplicate email addresses...")
 
 # Query to find emails that appear more than once
 query = """
@@ -26,9 +27,9 @@ query = """
 result = sf.query(query)
 records = result.get('records', [])
 
-print("\n🚨 TOP DUPLICATE EMAILS LIVE IN SALESFORCE:")
+print("\nTOP DUPLICATE EMAILS LIVE IN SALESFORCE:")
 if records:
     for rec in records:
         print(f"   - {rec['Email']}: appears {rec['expr0']} times")
 else:
-    print("   ✅ No duplicate emails found in Salesforce!")
+    print(" No duplicate emails found in Salesforce!")
