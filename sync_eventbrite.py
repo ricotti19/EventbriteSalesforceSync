@@ -139,7 +139,7 @@ def main():
         logging.warning(f"No CSV files found in the '{EXPORT_DIR}' directory!")
         return
 
-    logging.info(f"📚 Found {len(csv_files)} files to import. Starting batch processing...")
+    logging.info(f"Found {len(csv_files)} files to import. Starting batch processing...")
     
     for file_path in csv_files:
         logging.info(f"--- Starting file: {os.path.basename(file_path)} ---")
